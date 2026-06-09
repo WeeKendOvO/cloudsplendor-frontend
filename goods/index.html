@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非遗服饰商品中心</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+            padding:50px 4%;
+            font-family:"Microsoft Yahei",SimHei,sans-serif;
+            background:#f9f6f1;
+        }
+        .container{
+            max-width:1320px;
+            margin:0 auto;
+        }
+        .top-wrap{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:40px;
+            flex-wrap:wrap;
+            gap:20px;
+        }
+        .top-title{
+            font-size:30px;
+            color:#6b4f3e;
+            border-left:5px solid #a87c5b;
+            padding-left:16px;
+        }
+        .try-btn{
+            padding:13px 30px;
+            background:#a87c5b;
+            color:#fff;
+            text-decoration:none;
+            border-radius:8px;
+            transition:all 0.3s;
+            box-shadow:0 3px 10px rgba(168,124,91,0.25);
+        }
+        .try-btn:hover{
+            background:#8d6649;
+            transform:translateY(-2px);
+            box-shadow:0 5px 15px rgba(168,124,91,0.35);
+        }
+        .goods-box{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+            gap:32px;
+        }
+        .goods-item{
+            background:#fff;
+            border-radius:16px;
+            overflow:hidden;
+            border:1px solid #efe8dd;
+            box-shadow:0 2px 12px rgba(120,90,60,0.07);
+            transition:all 0.35s ease;
+        }
+        .goods-item:hover{
+            transform:translateY(-7px);
+            box-shadow:0 12px 30px rgba(120,90,60,0.13);
+            border-color:#d4bc9f;
+        }
+        .goods-img{
+            width:100%;
+            height:260px;
+            object-fit:cover;
+            display:block;
+        }
+        .goods-info{
+            padding:22px 26px;
+        }
+        .goods-item h3{
+            font-size:20px;
+            color:#333;
+            margin-bottom:12px;
+        }
+        .price-text{
+            color:#c83838;
+            font-size:22px;
+            font-weight:bold;
+            margin:14px 0;
+        }
+        .goods-item p{
+            color:#666;
+            line-height:1.7;
+        }
+        @media(max-width:768px){
+            body{padding:30px 3%;}
+            .top-title{font-size:24px;}
+            .goods-img{height:220px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-wrap">
+            <div class="top-title">非遗定制服饰商品</div>
+            <a href="http://8.217.84.11" target="_blank" class="try-btn">点击前往虚拟试衣</a>
+        </div>
+
+        <div class="goods-box">
+            <!--1-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img1.baidu.com/it/u=1256954223,3829172213&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1000" alt="宋锦手工旗袍">
+                <div class="goods-info">
+                    <h3>宋锦手工旗袍</h3>
+                    <div class="price-text">¥1299</div>
+                    <p>非遗古法宋锦织造，手工盘扣缝制，全版型支持线上虚拟试穿。</p>
+                </div>
+            </div>
+            <!--2-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img2.baidu.com/it/u=3925874122,2974562117&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1000" alt="新中式休闲上衣">
+                <div class="goods-info">
+                    <h3>新中式休闲上衣</h3>
+                    <div class="price-text">¥269</div>
+                    <p>改良国风剪裁，棉麻透气面料，一键试衣匹配身形，日常通勤百搭。</p>
+                </div>
+            </div>
+            <!--3-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img2.baidu.com/it/u=2153225787,3993554772&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1000" alt="国风西装外套">
+                <div class="goods-info">
+                    <h3>国风西装外套</h3>
+                    <div class="price-text">¥599</div>
+                    <p>中西结合立领版型，精纺毛料，支持面料可视化试衣，商务国风两用。</p>
+                </div>
+            </div>
+            <!--4-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img2.baidu.com/it/u=3592551127,2775899142&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1000" alt="香云纱马面裙">
+                <div class="goods-info">
+                    <h3>香云纱马面裙</h3>
+                    <div class="price-text">¥759</div>
+                    <p>非遗香云纱植物染面料，手工压褶，搭配上衣一键整体试穿。</p>
+                </div>
+            </div>
+            <!--5-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img2.baidu.com/it/u=2789114561,3152289797&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1000" alt="苎麻禅意禅衫">
+                <div class="goods-info">
+                    <h3>苎麻禅意禅衫</h3>
+                    <div class="price-text">¥329</div>
+                    <p>天然苎麻透气抑菌，宽松中式剪裁，休闲禅系穿搭，支持虚拟试衣。</p>
+                </div>
+            </div>
+            <!--6-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img2.baidu.com/it/u=1595322125,3525877927&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1000" alt="织锦对襟唐装">
+                <div class="goods-info">
+                    <h3>织锦对襟唐装</h3>
+                    <div class="price-text">¥869</div>
+                    <p>传统蜀锦提花面料，手工一字盘扣，节日礼服款，全尺寸线上试穿。</p>
+                </div>
+            </div>
+            <!--7-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=1985421362,1152369871&fm=253&fmt=auto&app=93&f=JPEG?w=800&h=1000" alt="桑蚕丝改良旗袍">
+                <div class="goods-info">
+                    <h3>桑蚕丝改良短旗袍</h3>
+                    <div class="price-text">¥929</div>
+                    <p>100%桑蚕丝素绉缎，日常短款版型，四季可穿，在线一键试衣。</p>
+                </div>
+            </div>
+            <!--8-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=2543698741,3798526632&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1000" alt="宋制褙子套装">
+                <div class="goods-info">
+                    <h3>宋制褙子汉服套装</h3>
+                    <div class="price-text">¥459</div>
+                    <p>仿宋锦印花面料，全套上衣下裙，整套穿搭虚拟上身试穿。</p>
+                </div>
+            </div>
+            <!--9-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=3215698742,2896354722&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1000" alt="老料香云纱外套">
+                <div class="goods-info">
+                    <h3>老料香云纱中式外套</h3>
+                    <div class="price-text">¥1599</div>
+                    <p>陈年野生桑蚕香云纱，手工缝制，轻奢国风外搭，支持版型试穿。</p>
+                </div>
+            </div>
+            <!--10-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=1745236991,3956221741&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1000" alt="亚麻阔腿国风裤">
+                <div class="goods-info">
+                    <h3>亚麻阔腿国风长裤</h3>
+                    <div class="price-text">¥239</div>
+                    <p>水洗天然亚麻，高腰阔腿剪裁，搭配上衣组合试衣。</p>
+                </div>
+            </div>
+            <!--11-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=3456987215,1254789632&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1000" alt="漳绒绣花马甲">
+                <div class="goods-info">
+                    <h3>漳绒手工绣花马甲</h3>
+                    <div class="price-text">¥699</div>
+                    <p>非遗漳绒面料，苏绣花鸟纹样，叠穿百搭，支持虚拟上身。</p>
+                </div>
+            </div>
+            <!--12-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=2963547812,2365897412&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1000" alt="柞蚕丝休闲禅裤">
+                <div class="goods-info">
+                    <h3>柞蚕丝宽松禅意长裤</h3>
+                    <div class="price-text">¥299</div>
+                    <p>天然柞蚕丝混纺面料，垂坠舒适，新中式日常穿搭试穿。</p>
+                </div>
+            </div>
+            <!--13-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=1236598745,3698521475&fm=253&fmt=auto&app=93&f=JPEG?w=800&h=1000" alt="云锦礼服长款旗袍">
+                <div class="goods-info">
+                    <h3>云锦重工长款礼服旗袍</h3>
+                    <div class="price-text">¥2299</div>
+                    <p>南京云锦提花面料，宴会礼服款，全尺寸高精度虚拟试衣。</p>
+                </div>
+            </div>
+            <!--14-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=3652147895,1523698741&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1000" alt="棉麻立领小褂">
+                <div class="goods-info">
+                    <h3>棉麻立领中式小褂</h3>
+                    <div class="price-text">¥259</div>
+                    <p>水洗棉麻透气亲肤，盘扣细节，日常通勤新中式上衣。</p>
+                </div>
+            </div>
+            <!--15-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=2145896325,3256987412&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1000" alt="莨绸半身长裙">
+                <div class="goods-info">
+                    <h3>天然莨绸半身大摆长裙</h3>
+                    <div class="price-text">¥529</div>
+                    <p>天然植物染色莨绸，大摆垂坠版型，搭配上衣整套试穿。</p>
+                </div>
+            </div>
+            <!--16-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=1963258741,3569874125&fm=253&fmt=auto&app=93&f=JPEG?w=800&h=1000" alt="织锦拜年唐装套装">
+                <div class="goods-info">
+                    <h3>织锦拜年唐装两件套</h3>
+                    <div class="price-text">¥999</div>
+                    <p>喜庆提花织锦面料，上衣+裤子成套，节日穿搭一键试衣。</p>
+                </div>
+            </div>
+            <!--17-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=3256987412,1596325874&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1000" alt="薄款真丝防晒开衫">
+                <div class="goods-info">
+                    <h3>真丝薄款国风防晒开衫</h3>
+                    <div class="price-text">¥369</div>
+                    <p>100%重磅真丝，轻薄透气，夏季外搭，支持虚拟试穿搭配。</p>
+                </div>
+            </div>
+            <!--18-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=2596321478,3125698745&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1000" alt="提花改良宋裤">
+                <div class="goods-info">
+                    <h3>暗纹提花改良宋裤</h3>
+                    <div class="price-text">¥319</div>
+                    <p>古风暗纹提花面料，宽松显瘦，适配各类中式上衣试衣。</p>
+                </div>
+            </div>
+            <!--19-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=1532698741,2698541325&fm=253&fmt=auto&app=93&f=JPEG?w=800&h=1000" alt="苏绣小立领衬衫">
+                <div class="goods-info">
+                    <h3>苏绣小立领真丝衬衫</h3>
+                    <div class="price-text">¥729</div>
+                    <p>领口手工苏绣纹样，素色真丝面料，商务新中式穿搭试穿。</p>
+                </div>
+            </div>
+            <!--20-->
+            <div class="goods-item">
+                <img class="goods-img" src="https://img0.baidu.com/it/u=3569874125,1963258741&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1000" alt="重缎复古长款风衣">
+                <div class="goods-info">
+                    <h3>重缎复古中式长风衣</h3>
+                    <div class="price-text">¥1399</div>
+                    <p>重磅醋酸重缎面料，中式盘扣风衣，春秋长款外搭，版型试衣。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

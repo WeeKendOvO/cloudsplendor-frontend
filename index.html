@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云享衣裳 | 虚拟试衣破局非遗出海</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5B7C99',
+                        secondary: '#A67C52',
+                        accent: '#8B5A2B',
+                        bgBase: '#F8F5F0',
+                        textDark: '#2C3E50',
+                        textLight: '#64748B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow-sm {
+                text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            }
+            .bg-gradient-soft {
+                background: linear-gradient(180deg, #F8F5F0 0%, #EEF2F7 100%);
+            }
+            .card-shadow {
+                box-shadow: 0 4px 20px rgba(91, 124, 153, 0.08);
+            }
+            /* 上传框内部图片适配 */
+            .upload-box-img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-bgBase text-textDark font-sans overflow-x-hidden">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 w-full bg-bgBase/90 backdrop-blur-sm z-50 border-b border-primary/10">
+        <div class="container mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-primary font-bold text-xl md:text-2xl">云享衣裳</span>
+                <span class="text-textLight text-sm hidden md:inline-block">虚拟试衣破局非遗出海</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-textDark hover:text-primary transition-colors">首页</a>
+                <a href="#about" class="text-textDark hover:text-primary transition-colors">项目介绍</a>
+                <a href="#technology" class="text-textDark hover:text-primary transition-colors">核心技术</a>
+                <a href="#culture" class="text-textDark hover:text-primary transition-colors">非遗文化</a>
+                <a href="#fitting" class="text-textDark hover:text-primary transition-colors">虚拟试衣</a>
+            </div>
+            <a href="#fitting" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full transition-all hover:shadow-lg">
+                立即试衣
+            </a>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section id="home" class="pt-28 pb-20 md:pt-36 md:pb-32 bg-gradient-soft">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-primary leading-tight mb-6 text-shadow-sm">
+                    虚拟试衣破局非遗出海
+                </h1>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] text-textLight max-w-3xl mx-auto mb-10">
+                    以AIGC与3D建模技术为核，赋能非遗服饰数字化传承与跨境出海，让东方美学跨越山海，触屏可及
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#fitting" class="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full text-lg font-medium transition-all hover:shadow-lg">
+                        沉浸式虚拟试衣
+                    </a>
+                    <a href="#about" class="border border-primary text-primary hover:bg-primary/5 px-8 py-3 rounded-full text-lg font-medium transition-all">
+                        了解项目
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目介绍 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">政策与行业双驱动</h2>
+                <p class="text-textLight">国家战略引方向，省市政策强赋能，非遗服饰出海正当时</p>
+            </div>
+
+            <!-- 政策背景 -->
+            <div class="mb-16">
+                <h3 class="text-xl font-bold text-textDark mb-6 border-l-4 border-secondary pl-4">政策背景</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-bgBase p-6 rounded-xl card-shadow">
+                        <h4 class="font-bold text-primary mb-3">国家层面</h4>
+                        <p class="text-textLight">中央财政投超113亿非遗资金，税收优惠延至2027年，"十五五规划"支持跨境电商与数字文化出海，强化非遗保护</p>
+                    </div>
+                    <div class="bg-bgBase p-6 rounded-xl card-shadow">
+                        <h4 class="font-bold text-primary mb-3">浙江省层面</h4>
+                        <p class="text-textLight">推进文化"新三样"出海，行动计划支持纺织服装跨境电商，激励数字营销与独立站建设</p>
+                    </div>
+                    <div class="bg-bgBase p-6 rounded-xl card-shadow">
+                        <h4 class="font-bold text-primary mb-3">宁波市层面</h4>
+                        <p class="text-textLight">2027年拟新增1200+跨境电商主体，最高1000万改造奖补，重点培育纺织服装产业带，支持仓储建设</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 行业背景 -->
+            <div class="mb-16">
+                <h3 class="text-xl font-bold text-textDark mb-6 border-l-4 border-secondary pl-4">行业背景</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-textLight mb-4">2024年全球民族服装市场规模达841亿美元，2032年预计达1411.9亿美元，年复合增速6.69%，东南亚、欧美需求旺盛。</p>
+                        <p class="text-textLight mb-4">全球虚拟试衣市场2024年规模55.7亿美元，2030年预计206.5亿美元，年复合增速24.6%，AR试穿助力跨境出海。</p>
+                        <p class="text-textLight">"一带一路"沿线非遗服饰年增18%，Z世代占65%，超6成愿为文化元素付费。</p>
+                    </div>
+                    <div class="bg-bgBase p-6 rounded-xl card-shadow">
+                        <h4 class="font-bold text-primary mb-4">市场核心痛点</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-medium text-textDark">文化传播壁垒高</h5>
+                                <p class="text-textLight text-sm">非遗文化传播受阻，海外用户不认价值，拒付溢价</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-textDark">试衣技术体验差</h5>
+                                <p class="text-textLight text-sm">虚拟试衣纹理失真，货不对板致跨境退货率高达30%-50%</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-textDark">产业供需匹配失衡</h5>
+                                <p class="text-textLight text-sm">企业缺传播渠道与展示工具，难满足海外特色服饰需求</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心技术 -->
+    <section id="technology" class="py-20 bg-bgBase">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">核心技术壁垒</h2>
+                <p class="text-textLight">三大核心技术，构建非遗服饰数字化与虚拟试衣全链条能力</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl card-shadow hover:translate-y-[-5px] transition-all">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-primary font-bold text-xl">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-textDark mb-4">高精度人体建模技术</h3>
+                    <p class="text-textLight mb-4">基于SMPL-X参数化模型与双引擎关键点提取技术，三维人体重建误差稳定控制在8mm以内，行业领先。</p>
+                    <p class="text-textLight">无需三分图，实时人体分割，30帧/秒动态处理，精准捕捉轮廓与发丝边缘，复杂场景下稳定流畅。</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl card-shadow hover:translate-y-[-5px] transition-all">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-primary font-bold text-xl">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-textDark mb-4">虚拟制衣与纹样数字化技术</h3>
+                    <p class="text-textLight mb-4">版型自动生成+数字化纹理技术，攻克非遗纹样数字化难题，自动处理非遗手稿，一键生成3D服装版型。</p>
+                    <p class="text-textLight">物理渲染工作流+UV映射+多通道贴图，高精度还原非遗纹样的色彩光泽与浮雕细节，逼近真实工艺效果。</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl card-shadow hover:translate-y-[-5px] transition-all">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-primary font-bold text-xl">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-textDark mb-4">智能匹配与文化风格识别技术</h3>
+                    <p class="text-textLight mb-4">采用并行计算与推理加速技术，单件服装2.7秒极速生成，对齐精度达92.3%，自适应匹配关键身材数据。</p>
+                    <p class="text-textLight">基于多模态识别模型，纹样与文化语义精准关联，风格识别准确率超90%，符合传统审美与现代场景。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 非遗文化板块 -->
+    <section id="culture" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-6">数字焕活非遗，衣载东方文化</h2>
+                    <p class="text-textLight mb-4">我们以技术为桥，破解非遗服饰线上展示困局，让宋锦的挺括、罗的柔软、甬绣的精巧在数字世界重现，让千年非遗技艺在全球视野下绽放新的生命力。</p>
+                    <p class="text-textLight mb-6">试运营以来，我们已服务26个国家和地区用户，获得海外华裔设计师、东亚艺术博物馆、跨文化博主的高度认可，真正实现"科技赋能文化传播"的国际化愿景。</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-bgBase p-4 rounded-lg">
+                            <h4 class="font-bold text-primary text-2xl mb-1">30+</h4>
+                            <p class="text-textLight text-sm">媒体深度报道</p>
+                        </div>
+                        <div class="bg-bgBase p-4 rounded-lg">
+                            <h4 class="font-bold text-primary text-2xl mb-1">26+</h4>
+                            <p class="text-textLight text-sm">服务国家地区</p>
+                        </div>
+                        <div class="bg-bgBase p-4 rounded-lg">
+                            <h4 class="font-bold text-primary text-2xl mb-1">5项</h4>
+                            <p class="text-textLight text-sm">发明专利</p>
+                        </div>
+                        <div class="bg-bgBase p-4 rounded-lg">
+                            <h4 class="font-bold text-primary text-2xl mb-1">5项</h4>
+                            <p class="text-textLight text-sm">软件著作权</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-bgBase rounded-2xl p-8 card-shadow">
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h4 class="font-bold text-textDark mb-2">文化传播价值</h4>
+                            <p class="text-textLight text-sm">让中国非遗技艺突破地理壁垒，实现活态传承，让东方美学以轻量化形式融入海外用户日常生活</p>
+                        </div>
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h4 class="font-bold text-textDark mb-2">产业带动价值</h4>
+                            <p class="text-textLight text-sm">联动非遗工坊构建完整跨境产业链，提升非遗产品海外溢价，带动传承人增收，降低服饰跨境退货率</p>
+                        </div>
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h4 class="font-bold text-textDark mb-2">人才培育价值</h4>
+                            <p class="text-textLight text-sm">为非遗活态传承与数字化出海储备力量，直接吸纳核心岗位200个，间接带动产业链上下游300个就业岗位</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 虚拟试衣核心交互区 -->
+    <section id="fitting" class="py-20 bg-gradient-soft">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-primary mb-4">沉浸式虚拟试衣</h2>
+                <p class="text-textLight">上传人像与服饰图片，一键生成非遗服饰试穿效果，感受东方美学的数字魅力</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl card-shadow p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <!-- 上传区域 -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-textDark font-medium mb-2">上传人像图片</label>
+                            <!-- 上传框：内部直接放预览图 -->
+                            <div id="personUpload" class="border-2 border-dashed border-primary/30 rounded-xl h-64 flex items-center justify-center cursor-pointer hover:border-primary transition-colors bg-bgBase/50 relative overflow-hidden">
+                                <input type="file" id="personImg" class="hidden" accept="image/*">
+                                <p id="personText" class="text-textLight text-center px-4 absolute inset-0 flex items-center justify-center">点击上传正面人像图片</p>
+                                <img id="personImgPreview" class="upload-box-img hidden absolute inset-0 p-2" alt="人像预览">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-textDark font-medium mb-2">上传服饰图片</label>
+                            <div id="clothUpload" class="border-2 border-dashed border-primary/30 rounded-xl h-64 flex items-center justify-center cursor-pointer hover:border-primary transition-colors bg-bgBase/50 relative overflow-hidden">
+                                <input type="file" id="clothImg" class="hidden" accept="image/*">
+                                <p id="clothText" class="text-textLight text-center px-4 absolute inset-0 flex items-center justify-center">点击上传非遗服饰图片</p>
+                                <img id="clothImgPreview" class="upload-box-img hidden absolute inset-0 p-2" alt="服饰预览">
+                            </div>
+                        </div>
+
+                        <button id="generateBtn" class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-xl transition-all disabled:bg-gray-300 disabled:cursor-not-allowed" disabled>
+                            一键生成试衣效果
+                        </button>
+                    </div>
+
+                    <!-- 结果展示 -->
+                    <div>
+                        <label class="block text-textDark font-medium mb-2">试衣效果</label>
+                        <div id="resultContainer" class="border-2 border-dashed border-primary/30 rounded-xl h-[530px] flex flex-col items-center justify-center bg-bgBase/50">
+                            <div id="resultEmpty" class="text-center">
+                                <p class="text-textLight">上传图片并生成后，试衣效果将在这里展示</p>
+                            </div>
+                            <div id="resultLoading" class="text-center hidden">
+                                <div class="animate-spin w-10 h-10 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
+                                <p class="text-textLight">正在生成试衣效果，请稍候...</p>
+                            </div>
+                            <div id="resultShow" class="w-full h-full hidden">
+                                <img id="resultImg" class="w-full h-full rounded-xl object-contain" alt="试衣效果">
+                            </div>
+                        </div>
+                        <a id="downloadBtn" href="#" class="mt-4 w-full inline-block text-center border border-primary text-primary hover:bg-primary/5 font-medium py-2 rounded-xl transition-all hidden" download="云享衣裳-试衣效果.png">
+                            下载试衣效果图
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">云享衣裳</h3>
+                    <p class="text-white/80 mb-4 max-w-md">以AIGC与3D建模技术为核，赋能非遗服饰数字化传承与跨境出海，让东方美学跨越山海，触屏可及。</p>
+                    <p class="text-white/80">项目负责人：金安琪 | 联系方式：18758597131</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">快速导航</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-white/80 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="#about" class="text-white/80 hover:text-white transition-colors">项目介绍</a></li>
+                        <li><a href="#technology" class="text-white/80 hover:text-white transition-colors">核心技术</a></li>
+                        <li><a href="#fitting" class="text-white/80 hover:text-white transition-colors">虚拟试衣</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">项目价值</h4>
+                    <ul class="space-y-2">
+                        <li class="text-white/80">非遗活态传承</li>
+                        <li class="text-white/80">文化跨境出海</li>
+                        <li class="text-white/80">产业数字化升级</li>
+                        <li class="text-white/80">就业带动共富</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-8 text-center text-white/70 text-sm">
+                <p>© 2026 云享衣裳 团队 版权所有 | 虚拟试衣破局非遗出海</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS交互逻辑 -->
+    <script>
+        // 后端接口地址
+        const API_BASE = "http://8.217.84.11:8000";
+
+        // 元素获取
+        const personUpload = document.getElementById('personUpload');
+        const personImg = document.getElementById('personImg');
+        const personImgPreview = document.getElementById('personImgPreview');
+        const personText = document.getElementById('personText');
+
+        const clothUpload = document.getElementById('clothUpload');
+        const clothImg = document.getElementById('clothImg');
+        const clothImgPreview = document.getElementById('clothImgPreview');
+        const clothText = document.getElementById('clothText');
+
+        const generateBtn = document.getElementById('generateBtn');
+        const resultEmpty = document.getElementById('resultEmpty');
+        const resultLoading = document.getElementById('resultLoading');
+        const resultShow = document.getElementById('resultShow');
+        const resultImg = document.getElementById('resultImg');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        // 全局变量存储图片文件
+        let personFile = null;
+        let clothFile = null;
+
+        // 人像上传事件
+        personUpload.addEventListener('click', () => personImg.click());
+        personImg.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            personFile = file;
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                personImgPreview.src = event.target.result;
+                personImgPreview.classList.remove('hidden');
+                personText.classList.add('hidden');
+                checkGenerateBtn();
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // 服饰上传事件
+        clothUpload.addEventListener('click', () => clothImg.click());
+        clothImg.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            clothFile = file;
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                clothImgPreview.src = event.target.result;
+                clothImgPreview.classList.remove('hidden');
+                clothText.classList.add('hidden');
+                checkGenerateBtn();
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // 检查生成按钮是否可用
+        function checkGenerateBtn() {
+            if (personFile && clothFile) {
+                generateBtn.disabled = false;
+            } else {
+                generateBtn.disabled = true;
+            }
+        }
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 生成试衣效果（适配后端返回格式）
+        generateBtn.addEventListener('click', async () => {
+            if (!personFile || !clothFile) return;
+
+            resultEmpty.classList.add('hidden');
+            resultShow.classList.add('hidden');
+            resultLoading.classList.remove('hidden');
+            generateBtn.disabled = true;
+            downloadBtn.classList.add('hidden');
+
+            const formData = new FormData();
+            formData.append('person_img', personFile);
+            formData.append('cloth_img', clothFile);
+
+            try {
+                const response = await fetch(`${API_BASE}/generate`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const res = await response.json();
+                console.log("接口返回数据：", res);
+
+                const imageUrl = res.output.choices[0].message.content[0].image;
+                
+                resultImg.src = imageUrl;
+                resultShow.classList.remove('hidden');
+                downloadBtn.href = imageUrl;
+                downloadBtn.classList.remove('hidden');
+
+            } catch (error) {
+                console.error("生成失败：", error);
+                alert('生成失败，请重试');
+            } finally {
+                resultLoading.classList.add('hidden');
+                generateBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
